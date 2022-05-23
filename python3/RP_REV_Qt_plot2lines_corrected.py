@@ -14,24 +14,24 @@ c = 0.15 #Comission Set node commision
 p = 1 #Penality assessed for defecting
 f = 1 - p #Fine amount
 #d = Deposit amount
-r = 1.6 #minimum RPL bonded minipool
+
 
 # Create and array of time (t) in years
 t = np.array(range(50))
 
 def honestROI(d):
     s = d / 32 #NO Share
-    y = (s*b*t)+((1-s)*c*b*t)+(s*m*t)+((1-s)*c*m*t)+(d+r) #Honest NO formula
+    y = (s*b*t)+((1-s)*c*b*t)+(s*m*t)+((1-s)*c*m*t)+(d) #Honest NO formula
     return y 
 
 def rougeROI(d):
     s = d / 32 #NO Share
-    z = (f*s*b*t)+(f*(1-s)*c*b*t)+(m*t)+(f*d+0.75*r) #Rougee NO formula
+    z = (f*s*b*t)+(f*(1-s)*c*b*t)+(m*t)+(f*d) #Rougee NO formula
     return z
 
 def Qt(d):
     s = d / 32
-    q = (d*f+0.75*r-d-r)/(b*s+b*c-b*c*s+s*m+c*m-c*s*m-b*s*f-b*c*f+b*c*s*f-m)#
+    q = (d*f*-d)/(b*s+b*c-b*c*s+s*m+c*m-c*s*m-b*s*f-b*c*f+b*c*s*f-m)#
     return q
 
 
@@ -71,7 +71,7 @@ print(f'Fraction returned (f = 1-p)                      f = {f}')
 print(f'Average validator PPV rewards (ETH/yr)           m = {m}')
 print(f'Number of validators                             n = {n}')
 print(f'Stealing penalty                                 p = {p}')
-print(f'rETH deposit                                     r = {r}') 
+
 
 #print('t = Time validating in years 
 print(f'\n')
