@@ -19,4 +19,4 @@ Finally, a risk matrix is assembled that compares the predicted risk quantificat
 
 * `figures` - Contains all Figrues from the report
 * `pythonModels` - Contains all the python3 scripts 
-* `report` - Download a complete copy of the Risk Anayslis Report. 
+* `report` - Download a complete copy of the Risk Analysis Report. 
