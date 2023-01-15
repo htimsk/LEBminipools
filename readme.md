@@ -20,3 +20,5 @@ Finally, a risk matrix is assembled that compares the predicted risk quantificat
 * `figures` - Contains all Figrues from the report
 * `pythonModels` - Contains all the python3 scripts 
 * `report` - [Download a complete copy of the Risk Analysis Report.](https://github.com/htimsk/LEBminipools/raw/47fff3528e7e7e09bc578a44ad581400f1aeaaea/report/Analysis%20of%20LEB%20Minipools.pdf)
+
+This analytical report and the associated code in this repository are available under the BB CY license. 
